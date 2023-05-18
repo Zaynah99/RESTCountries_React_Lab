@@ -21,13 +21,15 @@ const CountryContainer = () => {
      
 
 
-    const countryComponents = countries.map((country) => {
-        return <Country country={country}/>
+    const countryComponents = countries.map((country, index) => {
+        return <Country country={country} key={index} />
 
     })
 
     return ( 
+        <>
         {countryComponents}
+     </>
      );
 }
  
