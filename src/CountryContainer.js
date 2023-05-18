@@ -4,7 +4,7 @@ import Country from "./components/Country";
 const CountryContainer = () => {
 
     const [countries, setCountries] = useState([])
-    // const [visitedCountries, setVisitedCountries] = useState([])
+    const [visitedCountries, setVisitedCountries] = useState([])
 
 
     const fetchCountries = async () => {

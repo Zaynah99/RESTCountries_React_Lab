@@ -1,19 +1,27 @@
-const Country = ({country}) => {
+const Country = ({index, country, visitCountry}) => {
+
+    const visitedCountries = (index) => {
+        const visitedCountriesIndex = visitedCountries.findIndex(
+            (country) => country.name.common === country[index].name.common
+        )
+    }
 
     // const currencySymbol = Object.keys(Country.currencies)[0]
 
 
 
     return(
-        <>
-        <h3>{country.name.common}</h3>
-        <p>{country.capital}</p>
+<>
+        <input type ="checkbox" onClick={() => visitedCountries(index)}/>Country: {country.name.common}
+        <p>Capital City:{country.capital}</p>
+        <p>Continent: {country.region}</p>
+        <p> Flag:{country.flag}</p>
+    
+
         {/* <p>{country.currencies[currencySymbol.name]}</p> */}
         
-        {/* on click event moves mountry to visited <ul> */}
-        
-        
         </>
+    
     )
 }
 
